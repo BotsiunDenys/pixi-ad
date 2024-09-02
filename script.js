@@ -284,7 +284,7 @@ function initializeApp() {
                 // Fade in the final background
                 new TWEEN.Tween(finalBg).to({ alpha: 1 }, 300).start();
               });
-            }, 2500); // Adjust timing to fit your needs
+            }, 2500);
           });
         });
 
@@ -307,16 +307,16 @@ function initializeApp() {
           hand = new PIXI.Sprite(handTexture);
           hand.width = 223;
           hand.height = 186;
-          hand.anchor.set(1, 0.5); // Anchor set to right center
-          hand.alpha = 0; // Start with transparent
+          hand.anchor.set(1, 0.5);
+          hand.alpha = 0;
 
           // Load cat texture
           PIXI.Assets.load("images/cat.png").then((catTexture) => {
             cat = new PIXI.Sprite(catTexture);
             cat.width = 151;
             cat.height = 207;
-            cat.anchor.set(1); // Anchor set to bottom right
-            cat.alpha = 0; // Start with transparent
+            cat.anchor.set(1);
+            cat.alpha = 0;
 
             // Initial positions off-screen
             hand.x = app.renderer.width + 60;
